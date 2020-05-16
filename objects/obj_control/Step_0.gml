@@ -1,0 +1,36 @@
+/// @description controls
+if keyboard_check_pressed(vk_escape){
+	game_end()
+}
+
+if keyboard_check_pressed(vk_space){
+	game_restart()
+}
+
+if mouse_check_button_pressed(mb_left){
+	instance_create_layer(mouse_x,mouse_y,"Instances",obj_light)
+}
+
+if mouse_check_button_pressed(mb_right){
+	with instance_create_layer(mouse_x,mouse_y,"Instances",obj_light){
+		flickering = true
+	}
+}
+
+if mouse_check_button_pressed(mb_middle){
+	if instance_exists(obj_light){
+		var light = instance_nearest(mouse_x,mouse_y,obj_light)
+		with light{
+			instance_destroy()
+		}
+	}
+}
+
+if keyboard_check_pressed(ord("M")){
+	if (day == true){
+	    day = false
+	}
+	else {
+	    day = true
+	}
+}
