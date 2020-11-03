@@ -1,4 +1,7 @@
 /// @description update lights and shadows
+if (! surface_exists(surf)){
+	surf = createSurf()
+}
 surface_set_target(surf)
 
 draw_clear(c_black)
