@@ -34,3 +34,6 @@ if keyboard_check_pressed(ord("M")){
 	    day = true
 	}
 }
+
+//this line was made to view the size of the drawn surface
+//camera_set_view_pos(view_camera[0],device_mouse_x_to_gui(0)-camera_get_view_width(view_camera[0])/2,device_mouse_y_to_gui(0)-camera_get_view_height(view_camera[0])/2)

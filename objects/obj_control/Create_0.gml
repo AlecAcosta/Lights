@@ -1,8 +1,13 @@
 /// @description setting the surface
-surfScale = 1/15
+view_enabled=true
+view_visible[0]=true
+camera_set_view_size(view_camera[0],room_width,room_height)
+
+
+surfScale = 1/10
 
 createSurf = function(){
-	return surface_create(room_width,room_height)
+	return surface_create(surfScale*room_width,surfScale*room_height)
 }
 
 day = false
